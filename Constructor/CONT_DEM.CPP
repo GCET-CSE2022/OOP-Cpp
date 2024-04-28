@@ -6,7 +6,7 @@ class demo {
 
 public:
     /**
-     * @brief Default constructor.
+     *  Default constructor.
      * Initializes x to 0.
      */
     demo() {
@@ -15,10 +15,10 @@ public:
     }
 
     /**
-     * @brief Parameterized constructor.
+     *  Parameterized constructor.
      * Initializes x with the provided value.
      * 
-     * @param y Value to initialize x.
+     * y Value to initialize x.
      */
     demo(int y) {
         cout << "\n Parameterized constructor called";
@@ -26,7 +26,7 @@ public:
     }
 
     /**
-     * @brief Display the value of x.
+     *  Display the value of x.
      */
     void disp() {
         cout << "\n x = " << x;
