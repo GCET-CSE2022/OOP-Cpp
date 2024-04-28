@@ -1,41 +1,46 @@
-#include<iostream.h>
-#include<conio.h>
-class demo
-{
-       int x;
+#include <iostream>
+using namespace std;
 
-    public:
-       demo()
-       {
-	  cout<<"\n Default Arg const. Called";
-	  x=0;
+class demo {
+    int x;
 
-       }
+public:
+    /**
+     * @brief Default constructor.
+     * Initializes x to 0.
+     */
+    demo() {
+        cout << "\n Default constructor called";
+        x = 0;
+    }
 
+    /**
+     * @brief Parameterized constructor.
+     * Initializes x with the provided value.
+     * 
+     * @param y Value to initialize x.
+     */
+    demo(int y) {
+        cout << "\n Parameterized constructor called";
+        x = y;
+    }
 
-       demo(int y)
-       {
-	  cout<<"\n Parametrised  const. Called";
-	  x=y;
-
-
-       }
-
-       void disp()
-       {
-
-	cout<<"\n x = " <<x;
-       }
-
+    /**
+     * @brief Display the value of x.
+     */
+    void disp() {
+        cout << "\n x = " << x;
+    }
 };
-void main()
-{
 
-    clrscr();
+int main() {
+    // Creating an object using the default constructor
     demo obj1;
     obj1.disp();
 
+    // Creating an object using the parameterized constructor
     demo obj2(10);
     obj2.disp();
 
+    return 0;
 }
