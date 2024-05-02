@@ -1,20 +1,25 @@
 #include<iostream>
 using namespace std;
-class ArrayObj
-{
-    int a, b;
-    public:
-       void display(){cout<<"\n HELLO ";}
 
+// Class definition for ArrayObj
+class ArrayObj {
+    int a, b; // Private member variables a and b
+    
+public:
+    // Method to display a message
+    void display() {
+        cout << "\n HELLO ";
+    }
 };
 
-
-int main()
-{
-     ArrayObj obj[5];
-     int i;
-     for(i=0;i<5;i++)
-	obj[i].display();
-return 0;
-
+// Main function
+int main() {
+    ArrayObj obj[5]; // Array of 5 ArrayObj objects
+    int i;
+    
+    // Loop through each object in the array and call the display method
+    for(i = 0; i < 5; i++)
+        obj[i].display();
+    
+    return 0;
 }
