@@ -1,22 +1,10 @@
-
-// FOR TURBO C++
-
 #include <iostream>
-#include <conio.h>
-
-void main()
-{
-    clrscr();                       // Clear the screen
-    cout << "Hello World!" << endl; // Display the message
-    getch();                        // Wait for a key press
-}
-
-// FOR RECENT COMPILERS (C++ standard)
-
-#include <iostream>
-
+using namespace std;
 int main()
 {
-    std::cout << "Hello World!" << endl;
-    return 0;
-}
+
+    cout << "Hello World!" << endl;
+
+
+};
+
