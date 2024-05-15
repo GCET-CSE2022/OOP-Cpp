@@ -5,7 +5,9 @@ class MyBaseClass
 {
 protected:
     int data;
+
 public:
+
     MyBaseClass():data(0)
     {
          cout<<endl<<"Zero Argument Constructor of Base Class Called"<<endl;
@@ -14,38 +16,30 @@ public:
     MyBaseClass(int x):data(x)
     {
      cout<<endl<<"One Argument Ctor of Base Class Called"<<endl;
-
     };
+
+
 };
 
-
-
-class MyDerivedClass: public MyBaseClass
+class MyDerivedClass: private MyBaseClass
 {
 
 public:
+    MyDerivedClass() : MyBaseClass() {}; // Calling base Class Zero Arg Ctor
 
-    MyDerivedClass(): MyBaseClass()
+    MyDerivedClass(int T) : MyBaseClass(T) {}; // Calling base Class One Arg Ctor
+
+void DisplayData()
     {
+       cout<<endl<<"HELLO Display  "<<endl;
+      // MyBaseClass::DisplayData();
+
     }
-
-    MyDerivedClass(int x): MyBaseClass(x)
-    {
-     };
-
-    void DisplayData()
-    {
-        cout<<endl<<"Display Function of Derived Class Called:  "<<data<<endl;
-    }
-
 };
 
 int main()
 {
-
-  MyDerivedClass Obj1;
-    Obj1.DisplayData();
-      MyDerivedClass Obj2(5);
-    Obj2.DisplayData();
-
+   MyDerivedClass Obj1,Obj2(5);
+   Obj1.DisplayData();
+   Obj2.DisplayData();
 }
